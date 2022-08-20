@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+body{
+    background: url(IMG/FONDO9.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+body label:hover{
+    background: #05001fd7;
+    background-size: 100vw 100vh;
+    
+}
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    height: 100px;
+    display: fixed;
+    top: 0;left: 0;
+    text-align: right;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.menu{
+    float: right;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+    
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:active{
+    border-bottom: 2px solid rgb(44, 0, 42);
+    background: #0000000c;
+    padding-bottom: 5px;
+}
+
+.container .menu a:hover{
+    border-bottom: 5px solid rgb(119, 0, 113);
+    background: #1f1f1f05;
+    padding-bottom: 5px;
+}
+
+.menu:active{
+    color: rgb(119, 0, 113);
+}
+
+/*logo de sirius*/
+
+.sirius{
+    display: flex;
+    align-items: center;
+}
+
+/*Fin de Estilos para el encabezado*/
+
+/*Menú lateral*/
+#btn-menu{
+    display: none;
+}
+#btn-menu:active{
+    background-color: red;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #05001fd7;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:active{
+    border-left: 5px solid red;
+    background: #1f1f1f;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid rgb(119, 0, 113);
+    background: #1f1f1f;
+}
+
+.cont-menu nav a:active{
+    border-left: 5px solid rgb(44, 0, 42);
+    background: #000000;
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.logoindex:hover {
+transform: scale(1.06); 
+}
+
+/*formulario*/
+
+.container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+}
+.container-form h2{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 35px;
+    -webkit-text-stroke: 0.4px rgb(42, 3, 94);
+}
+
+
+.container-form p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    -webkit-text-stroke: 0.4px rgb(42, 3, 94);
+    text-align: left;
+}
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    -webkit-text-stroke: 0.4px rgb(42, 3, 94);
+}
+.container-form a i{
+    color: orange;
+    margin-right: 10px;
+}
+.container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background:  rgb(63, 5, 138);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.container-form .btn-enviar:hover{
+    background:  rgb(20, 0, 46);
+}
